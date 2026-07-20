@@ -30,9 +30,10 @@ button, input, select, textarea { font: inherit; }
 .rails--long { width: 100%; }
 
 .site-header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid var(--hairline); background: rgba(255,255,255,.94); backdrop-filter: blur(8px); }
-.header-inner { display: flex; height: 72px; align-items: center; justify-content: space-between; }
-.logo { display: flex; align-items: center; flex: 0 0 auto; }
-.logo-image { width: 44px; height: 44px; object-fit: contain; }
+.header-inner { display: flex; height: 88px; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; flex: 0 0 auto; gap: 10px; }
+.logo-image { width: 64px; height: 64px; object-fit: contain; }
+.logo-text { font-family: var(--font-en), sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -.02em; white-space: nowrap; }
 .desktop-nav ul { display: flex; gap: 36px; margin: 0; padding: 0; list-style: none; font-size: 14px; font-weight: 700; }
 .desktop-nav a { padding: 6px 0; }
 .desktop-nav a:hover { color: var(--red); }
@@ -220,9 +221,12 @@ footer { padding: 56px 0; border-top: 1px solid var(--hairline); color: var(--gr
 [data-reveal].in { opacity: 1; transform: none; }
 
 @media (max-width: 840px) {
+  .header-inner { height: 80px; }
+  .logo-image { width: 56px; height: 56px; }
+  .logo-text { font-size: 20px; }
   .desktop-nav, .header-inner > .header-cta { display: none; }
   .menu-button { display: block; }
-  .mobile-nav { display: grid; position: fixed; top: 73px; right: 0; left: 0; height: calc(100dvh - 73px); overflow: auto; visibility: hidden; background: #fff; opacity: 0; transform: translateY(-8px); transition: opacity .2s, transform .2s, visibility .2s; }
+  .mobile-nav { display: grid; position: fixed; top: 81px; right: 0; left: 0; height: calc(100dvh - 81px); overflow: auto; visibility: hidden; background: #fff; opacity: 0; transform: translateY(-8px); transition: opacity .2s, transform .2s, visibility .2s; }
   .mobile-nav.is-open { visibility: visible; opacity: 1; transform: none; }
   .mobile-nav .container { display: flex; padding: 28px 0 48px; flex-direction: column; }
   .mobile-nav a { padding: 18px 4px; border-bottom: 1px solid var(--hairline); font-size: 18px; font-weight: 900; }
