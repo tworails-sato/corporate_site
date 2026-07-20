@@ -4,7 +4,7 @@
 
 ## 実装内容
 
-- `/`：トップページ（FV、課題、実績数値、プロダクト、対象別導線、note記事、情熱ピッチ、CTA）
+- `/`：トップページ（FV、課題、サービス、実績数値、対象別導線、note記事、情熱ピッチ、CTA）
 - `/company`：Purpose / Mission / Vision / Value、代表メッセージ、会社概要
 - `/services`：社長カルテ、リーダーズGAP、社長カルテPartners（OEM）
 - `/contact`：サーバー送信対応のお問い合わせフォーム
@@ -15,7 +15,7 @@
 - stickyヘッダーと、キーボード・Esc・aria属性に対応したモバイルナビ
 - IntersectionObserverによる表示アニメーションと数値カウントアップ
 - `prefers-reduced-motion` 対応
-- Next.js Imageによる画像最適化
+- Next.js Imageによる画像最適化（ヘッダーロゴ、ISSUEレーダーチャートを含む）
 - note RSS最新3件取得（1時間キャッシュ）と取得失敗時の代替表示
 - 問い合わせの必須入力、クライアント／サーバー両方の検証、送信中・成功・失敗表示、二重送信防止、honeypot
 
@@ -23,7 +23,7 @@
 
 以下はコードから分離してあります。確定後に環境変数または該当設定を更新してください。
 
-1. IN NUMBERSのローンチ月・集計時点：公開画面では未確定の月表記を出していません。確定後に `app/page.tsx` へ追記してください。
+1. IN NUMBERSの集計時点：現在は指示書どおり「2026年◯月時点」を表示しています。確定後に `app/page.tsx` の表記を差し替えてください。
 2. noteアカウント名：`NOTE_ACCOUNT` にnoteのアカウント名（URLの `note.com/` 直後）を設定してください。未設定・取得失敗時は代替記事を表示します。
 3. 問い合わせ送信先：`CONTACT_TO_EMAIL` を設定してください。
 4. リーダーズGAP専用LP：現在は `https://ceo-sherpa.com/gap.pdf` への暫定リンクです。専用LP公開後に `app/services/page.tsx` のURLを差し替えてください。

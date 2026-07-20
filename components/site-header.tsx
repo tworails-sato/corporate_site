@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { Rails } from "./rails";
 
 const links = [
-  { href: "/services", label: "プロダクト" },
+  { href: "/services", label: "サービス" },
   { href: "https://karte.ceo-sherpa.com/partners.html", label: "パートナー制度", external: true },
   { href: "/#column", label: "コラム" },
   { href: "/company", label: "会社概要" },
@@ -37,7 +37,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="logo" aria-label="Two Rails トップページ">
-          <Rails />Two Rails
+          <Image className="logo-image" src="/logo.png" alt="Two Rails" width={225} height={225} priority />
         </Link>
         <nav className="desktop-nav" aria-label="メインナビゲーション">
           <ul>

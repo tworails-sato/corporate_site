@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s ｜ Two Rails",
   },
   description:
-    "Two Railsは、売上を伸ばす「次の一手」を見つける診断を中心に、経営支援プロダクトを開発しています。",
+    "Two Railsは、売上を伸ばす「次の一手」を見つける診断を中心に、経営支援サービスを開発しています。",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

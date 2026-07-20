@@ -5,7 +5,7 @@ import { Rails } from "@/components/rails";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata(
-  "プロダクト",
+  "サービス",
   "社長カルテ、リーダーズGAP、社長カルテPartners（OEM）をご紹介します。",
   "/services",
 );
@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata(
 export default function ServicesPage() {
   return (
     <>
-      <div className="page-hero"><div className="container"><p className="page-en">PRODUCTS</p><h1>プロダクト</h1><p>Two Railsは、経営者の意思決定と組織の実行のあいだにある「認識のズレ」を可視化する診断プロダクトを開発しています。目的の異なる2つの診断で、経営者が本当の課題に気づく最初の一歩を支えます。</p></div></div>
+      <div className="page-hero"><div className="container"><p className="page-en">SERVICE</p><h1>サービス</h1><p>Two Railsは、経営者の意思決定と組織の実行のあいだにある「認識のズレ」を可視化する診断サービスを開発しています。目的の異なる2つの診断で、経営者が本当の課題に気づく最初の一歩を支えます。</p></div></div>
 
       <section className="product-detail" id="shacho-karte"><div className="container">
         <div className="prod-head" data-reveal><span className="prod-tag">FOR CEO</span><h2 className="prod-name">社長カルテ</h2></div>
