@@ -24,7 +24,7 @@ export function ViewEffects() {
           revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.18 });
 
     const countObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

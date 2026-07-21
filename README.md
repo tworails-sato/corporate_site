@@ -14,6 +14,8 @@
 - Organization構造化データ
 - stickyヘッダーと、キーボード・Esc・aria属性に対応したモバイルナビ
 - IntersectionObserverによる表示アニメーションと数値カウントアップ
+- FVの遠近レール背景、3行コピーの登場演出、無限マーキー
+- 見出し・本文・図版が時間差でせり上がるスクロール演出
 - `prefers-reduced-motion` 対応
 - Next.js Imageによる画像最適化（ヘッダーロゴ、ISSUEレーダーチャートを含む）
 - note RSS最新3件取得（1時間キャッシュ）と取得失敗時の代替表示
