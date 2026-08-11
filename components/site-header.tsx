@@ -36,9 +36,9 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href="/" className="logo" aria-label="Two Rails トップページ">
+        <Link href="/" className="logo" aria-label="Two rails トップページ">
           <Image className="logo-image" src="/logo.png" alt="" width={225} height={225} priority />
-          <span className="logo-text">Two Rails</span>
+          <span className="logo-text">Two rails</span>
         </Link>
         <nav className="desktop-nav" aria-label="メインナビゲーション">
           <ul>

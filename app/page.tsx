@@ -11,40 +11,49 @@ export default async function Home() {
     <>
       <HomeHero />
 
-      <section className="section section--border">
-        <div className="container issue-grid">
-          <div>
-            <p className="section-label" data-reveal>ISSUE</p>
-            <h2 className="section-title d1" data-reveal>経営と現場のGAPをなくし、組織が前に進むための<span className="mark">「次の一手」</span>をつくる</h2>
-            <div className="body-copy issue-copy d2" data-reveal>
-              <p>経営において最も大事なことは、意思決定。<br />だからこそ、経営者自身が、優先度の高い課題がなにかを的確に捉え、打ち手をスピーディに実行できるかどうかが鍵になります。</p>
-              <p>しかし経営は方針を伝えているつもりでも、十分には届かない。<br />現場は、何を考えているのかがわからないから動かない。<br />組織が大きくなるほどに、こうしたズレは静かに広がっていきます。</p>
-              <p>私たちは、この<span className="mark">GAP</span>こそが、最も解決すべきことと捉え、社長の認識と組織の実態のあいだにあるGAPを数値で示し、次にとるべき最良の選択を実行・実現させるための確証を提供します。</p>
-            </div>
-          </div>
-          <figure className="issue-figure d3" data-reveal>
-            <Image src="/issue-radar.svg" alt="経営者と現場の認識ギャップを示すレーダーチャート" width={520} height={500} sizes="(max-width: 840px) 100vw, 48vw" unoptimized />
-            <figcaption>経営者と現場の認識には、これだけのGAPが生まれている。</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section className="section" id="products">
+      <section className="section section--border" id="products">
         <div className="container">
-          <p className="section-label" data-reveal>SERVICE</p>
-          <h2 className="section-title d1" data-reveal>目的の異なる2つの診断で、<br />本当の課題を可視化する。</h2>
-          <div className="product-flow">
-            <article className="product-card d2" data-reveal>
-              <span className="product-tag">FOR CEO</span>
-              <h3 className="product-name">社長カルテ</h3>
-              <p className="product-desc">16テーマで経営者の自己認識を可視化するエグゼクティブ診断。商談前の掘り起こしツールとして、眠っている名刺リストを対話のきっかけに変えます。</p>
-              <Link href="/services#shacho-karte" className="text-link">社長カルテを見る →</Link>
+          <div className="products-heading" data-reveal>
+            <p className="section-label">PRODUCTS</p>
+            <h2 className="section-title">経営支援のための、2つの診断プロダクト。</h2>
+            <p className="products-lead">経営者個人の課題から、組織全体のGAPまで。目的に応じて選べる診断プロダクトを開発・提供しています。</p>
+          </div>
+          <div className="product-catalog">
+            <article className="catalog-item" data-reveal>
+              <div className="catalog-media">
+                <Image src="/images/shacho-karte-report.jpg" alt="社長カルテの診断レポート画面" fill sizes="(max-width: 840px) 100vw, 50vw" />
+              </div>
+              <div className="catalog-body">
+                <span className="product-tag">FOR CEO</span>
+                <p className="catalog-logo">社長カルテ</p>
+                <h3>社長カルテ</h3>
+                <p className="catalog-desc">経営者の自己認識を可視化する、<strong>エグゼクティブ診断プロダクト</strong>。16テーマのスコアで「どこに課題があるか」「何から着手すべきか」を明らかにします。</p>
+                <dl className="catalog-specs">
+                  <div><dt>診断テーマ</dt><dd>16テーマ</dd></div>
+                  <div><dt>所要時間</dt><dd>約5分</dd></div>
+                  <div><dt>出力</dt><dd>16テーマのレーダーチャート＋フィードバックレポート</dd></div>
+                  <div><dt>比較基準</dt><dd>成長企業の経営者 約800名のデータ</dd></div>
+                </dl>
+                <Link href="/services#shacho-karte" className="text-link">社長カルテを見る →</Link>
+              </div>
             </article>
-            <article className="product-card gap d3" data-reveal>
-              <span className="product-tag">FOR ORGANIZATION</span>
-              <h3 className="product-name">リーダーズGAP</h3>
-              <p className="product-desc">社長と幹部・現場の認識のズレを定量化する組織診断。組織全体のデータから、どのテーマを優先して支援するかを特定します。</p>
-              <Link href="/services#leaders-gap" className="text-link">リーダーズGAPを見る →</Link>
+            <article className="catalog-item catalog-item--reverse" data-reveal>
+              <div className="catalog-media">
+                <Image src="/images/leaders-gap-screenshot.jpg" alt="リーダーズGAPの診断レポート画面" fill sizes="(max-width: 840px) 100vw, 50vw" />
+              </div>
+              <div className="catalog-body">
+                <span className="product-tag product-tag--sky">FOR ORGANIZATION</span>
+                <p className="catalog-logo catalog-logo--gap">リーダーズGAP</p>
+                <h3>リーダーズGAP</h3>
+                <p className="catalog-desc">組織の<strong>「本音」から、課題を可視化する組織診断プロダクト</strong>。経営層・幹部・現場の認識のズレを、上下（経営層⇄現場）と左右（部門間）の両面から捉え、GAPの大きい領域を明らかにします。</p>
+                <dl className="catalog-specs">
+                  <div><dt>診断構造</dt><dd>上下＋左右の多面診断</dd></div>
+                  <div><dt>対象者</dt><dd>経営層／幹部／現場メンバー</dd></div>
+                  <div><dt>所要時間</dt><dd>診断のみ約10分（インタビュー込みで一人あたり約30分）</dd></div>
+                  <div><dt>出力</dt><dd>GAP診断レポート（組織単位で集計）</dd></div>
+                </dl>
+                <Link href="/services#leaders-gap" className="text-link">リーダーズGAPを見る →</Link>
+              </div>
             </article>
           </div>
         </div>
@@ -97,14 +106,10 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="section section--border section--sky">
-        <div className="container">
-          <p className="section-label" data-reveal>INITIATIVES</p><h2 className="section-title d1" data-reveal>診断だけでなく、<br />挑戦する人を直接応援する。</h2>
-          <p className="body-copy d2" data-reveal>私たちのミッションは、診断サービスの外にも広がっています。情熱を持つ挑戦者が最初の一歩を踏み出せる場を、自ら運営しています。</p>
-          <article className="initiative-card d3" data-reveal>
-            <div className="initiative-visual"><span className="tag">PITCH EVENT</span><h3>情熱ピッチ</h3><span className="caption">はじめの0.1歩を応援する</span></div>
-            <div className="initiative-body"><p>「立派な事業計画はいらない、情熱ひとつで参加できる」——業界初の応援型ピッチイベント。夢や想いを持つ挑戦者が舞台に立ち、応援金やメンタリング、出資マッチングを通じて最初の一歩を後押しします。これまでに4回開催してきました。</p><a href="https://www.jonetsu-pitch.com/" target="_blank" rel="noopener" className="text-link">情熱ピッチ公式サイトへ ↗</a></div>
-          </article>
+      <section className="initiative-strip section--border">
+        <div className="container" data-reveal>
+          <p>私たちは、診断プロダクトの開発だけでなく、挑戦する人が最初の一歩を踏み出せる場づくりにも取り組んでいます。</p>
+          <Link href="/company#initiatives" className="text-link">私たちの取り組みを見る →</Link>
         </div>
       </section>
 

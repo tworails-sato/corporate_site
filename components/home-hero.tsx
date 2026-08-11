@@ -54,7 +54,7 @@ export function HomeHero() {
             <span className="ln"><span>世界を創る。</span></span>
           </h1>
           <span className="rails-mark" aria-hidden="true"><span /><span /></span>
-          <p className="hero-sub">Two Railsは、売上を伸ばす<strong>「次の一手」を見つける診断</strong>を中心に、経営支援サービスを開発しています。</p>
+          <p className="hero-sub">Two rails は、経営支援者のための診断プロダクトを開発する会社です。<br />経営と現場のGAPを可視化し、支援者の「次の一手」を武器にします。</p>
           <Link href="/services" className="button hero-cta">サービスを見る</Link>
         </div>
         <div className="scroll-cue" aria-hidden="true">SCROLL</div>

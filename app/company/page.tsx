@@ -79,6 +79,18 @@ export default function CompanyPage() {
           <tr><th>お問い合わせ</th><td><Link href="/contact" className="text-link" style={{ marginTop: 0 }}>お問い合わせフォームへ →</Link></td></tr>
         </tbody></table>
       </div></section>
+
+      <section className="band tint" id="initiatives"><div className="container">
+        <div className="section-head" data-reveal>
+          <p className="band-label">INITIATIVES</p>
+          <h2>診断プロダクトの、その先へ。</h2>
+          <p className="initiatives-lead">Two rails のミッションは、「情熱が、放置されない世界を創る」こと。その実現は、診断プロダクトの開発だけにとどまりません。情熱を持つ挑戦者が、最初の一歩を踏み出せる場を、私たち自身が運営しています。</p>
+        </div>
+        <article className="initiative-card" data-reveal>
+          <div className="initiative-visual"><span className="tag">PITCH EVENT</span><h3>情熱ピッチ</h3><span className="caption">はじめの0.1歩を応援する</span></div>
+          <div className="initiative-body"><p>「立派な事業計画はいらない、情熱ひとつで参加できる」——応援型のピッチイベント。夢や想いを持つ挑戦者が舞台に立ち、応援金・メンタリング・出資マッチングを通じて、最初の一歩を後押しします。</p><a href="https://www.jonetsu-pitch.com/" target="_blank" rel="noopener" className="text-link">情熱ピッチ公式サイトへ ↗</a></div>
+        </article>
+      </div></section>
     </>
   );
 }
