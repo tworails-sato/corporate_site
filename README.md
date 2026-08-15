@@ -18,7 +18,7 @@
 - 見出し・本文・図版が時間差でせり上がるスクロール演出
 - `prefers-reduced-motion` 対応
 - Next.js Imageによる画像最適化（ヘッダーロゴ、ISSUEレーダーチャートを含む）
-- note RSS最新3件取得（1時間キャッシュ）と取得失敗時の代替表示
+- note RSS最新3件取得（6時間キャッシュ）、サムネイル・抜粋表示、取得失敗時の穏当な代替表示
 - 問い合わせの必須入力、クライアント／サーバー両方の検証、送信中・成功・失敗表示、二重送信防止、honeypot
 
 ## 未確定項目
@@ -26,7 +26,7 @@
 以下はコードから分離してあります。確定後に環境変数または該当設定を更新してください。
 
 1. IN NUMBERSの集計時点：現在は指示書どおり「2026年◯月時点」を表示しています。確定後に `app/page.tsx` の表記を差し替えてください。
-2. noteアカウント名：`NOTE_ACCOUNT` にnoteのアカウント名（URLの `note.com/` 直後）を設定してください。未設定・取得失敗時は代替記事を表示します。
+2. noteアカウント名：既定値は `tworails_sato` です。別アカウントへ変更する場合のみ、`NOTE_ACCOUNT` にURLの `note.com/` 直後の値を設定してください。取得失敗時は「準備中」の案内を表示します。
 3. 問い合わせ送信先：`CONTACT_TO_EMAIL` を設定してください。
 4. リーダーズGAP専用LP：現在は `https://ceo-sherpa.com/gap.pdf` への暫定リンクです。専用LP公開後に `app/services/page.tsx` のURLを差し替えてください。
 5. プライバシーポリシー：公開前に内容、制定日、Cookie・アクセス解析に関する記載を専門家へ確認してください。GA4等を導入する場合は記載を更新してください。
@@ -38,7 +38,7 @@
 | 変数 | 必須 | 用途 |
 |---|---:|---|
 | `NEXT_PUBLIC_SITE_URL` | 本番で必須 | canonical、OGP、sitemap、構造化データの基準URL。例：`https://t-rails.com` |
-| `NOTE_ACCOUNT` | note連携時 | noteアカウント名。未設定時は代替表示 |
+| `NOTE_ACCOUNT` | 任意 | noteアカウント名。未設定時は `tworails_sato` を使用 |
 | `RESEND_API_KEY` | フォーム送信時 | Resendの秘密鍵。サーバーでのみ使用し、ブラウザへ露出しません |
 | `CONTACT_TO_EMAIL` | フォーム送信時 | 問い合わせ受信先 |
 | `CONTACT_FROM_EMAIL` | フォーム送信時 | Resendで認証済みドメインの送信元。例：`Two Rails <contact@t-rails.com>` |

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Rails } from "@/components/rails";
 import { HomeHero } from "@/components/home-hero";
-import { getNoteArticles } from "@/lib/note";
+import { getNoteArticles, NOTE_PROFILE_URL } from "@/lib/note";
 
 export default async function Home() {
   const { articles, fallback } = await getNoteArticles();
@@ -95,14 +95,29 @@ export default async function Home() {
       <section className="section section--border" id="column">
         <div className="container">
           <p className="section-label" data-reveal>COLUMN</p><h2 className="section-title d1" data-reveal>経営支援の現場から。</h2>
-          <div className="column-grid">
-            {articles.map((article) => (
-              <a key={`${article.url}-${article.title}`} href={article.url} target="_blank" rel="noopener" className="column-card d2" data-reveal>
-                <p className="column-date">{article.date}</p><p className="column-title">{article.title}</p>
-              </a>
-            ))}
+          {articles.length > 0 ? (
+            <div className="column-grid">
+              {articles.map((article) => (
+                <a key={article.url} href={article.url} target="_blank" rel="noopener" className="column-card d2" data-reveal>
+                  <span
+                    className={`column-thumbnail${article.image === "/logo.png" ? " column-thumbnail--fallback" : ""}`}
+                    style={{ backgroundImage: `url(${JSON.stringify(article.image)})` }}
+                    aria-hidden="true"
+                  />
+                  <span className="column-content">
+                    {article.date && <span className="column-date">{article.date}</span>}
+                    <span className="column-title">{article.title}</span>
+                    {article.excerpt && <span className="column-excerpt">{article.excerpt}</span>}
+                  </span>
+                </a>
+              ))}
+            </div>
+          ) : (
+            fallback && <p className="column-fallback d2" data-reveal>最新記事を準備中です。公開済みの記事はnoteでご覧いただけます。</p>
+          )}
+          <div className="column-footer d3" data-reveal>
+            <a href={NOTE_PROFILE_URL} target="_blank" rel="noopener" className="text-link">記事一覧を見る →</a>
           </div>
-          {fallback && <p className="column-fallback d3" data-reveal>最新記事を取得できない場合は、おすすめ記事を表示しています。</p>}
         </div>
       </section>
 
